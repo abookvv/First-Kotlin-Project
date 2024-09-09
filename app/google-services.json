@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "10253316146",
+    "project_id": "adaptation-6e7f6",
+    "storage_bucket": "adaptation-6e7f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10253316146:android:bfd172b4d2190360f80c2b",
+        "android_client_info": {
+          "package_name": "vistory.rate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC30zgC1APBHhlba_IKJVFZtuMqTdGYfbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
