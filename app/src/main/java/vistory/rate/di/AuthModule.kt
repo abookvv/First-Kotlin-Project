@@ -8,8 +8,10 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
+import vistory.rate.authentication.IsAuthenticatedRepositoryImpl
 import vistory.rate.authentication.login.LoginViaFirebaseRepositoryImpl
 import vistory.rate.authentication.registration.RegisterViaFirebaseRepositoryImpl
+import vistory.rate.domain.repository.AuthRepository
 import vistory.rate.domain.repository.LoginRepository
 import vistory.rate.domain.repository.RegisterRepository
 
@@ -31,5 +33,11 @@ object AuthModule {
     @Provides
     fun provideRegisterRepository(auth: FirebaseAuth): RegisterRepository {
         return RegisterViaFirebaseRepositoryImpl(auth)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideAuthRepository(auth: FirebaseAuth): AuthRepository {
+        return IsAuthenticatedRepositoryImpl(auth)
     }
 }

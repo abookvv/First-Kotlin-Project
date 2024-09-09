@@ -19,6 +19,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -27,6 +30,8 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import vistory.rate.domain.repository.LoginResult
+import vistory.rate.domain.repository.RegisterResult
 import vistory.rate.presentation.R
 import vistory.rate.presentation.viewmodel.AuthenticationViewModel
 import vistory.rate.presentation.ui.theme.authBackgroundColor
@@ -36,6 +41,18 @@ import vistory.rate.presentation.ui.theme.pink
 
 @Composable
 fun AuthScreen(navController: NavController, viewModel: AuthenticationViewModel) {
+
+    val uiState by viewModel.uiState.collectAsState()
+
+    LaunchedEffect(uiState) {
+        when(uiState){
+            is LoginResult.Success -> ""
+            is LoginResult.Loading -> ""
+            null -> ""
+            is LoginResult.Error -> ""
+        }
+    }
+
     Scaffold(
         modifier = Modifier.fillMaxSize(), containerColor = authBackgroundColor
     ) { innerPadding ->

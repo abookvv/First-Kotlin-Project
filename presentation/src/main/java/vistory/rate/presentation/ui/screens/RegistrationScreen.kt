@@ -46,9 +46,9 @@ fun RegistrationScreen(navController: NavController, viewModel: RegistrationView
     LaunchedEffect(uiState) {
         when(uiState){
             is RegisterResult.Success -> navController.popBackStack()
-            is RegisterResult.Loading -> TODO()
-            null -> TODO()
-            is RegisterResult.Error -> TODO()
+            is RegisterResult.Loading -> ""
+            null -> ""
+            is RegisterResult.Error -> ""
         }
     }
 
