@@ -38,21 +38,26 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             vistory.rate.presentation.ui.theme.VistoryRateTheme {
-                val uiState by authViewModel.uiState.collectAsState()
-
-                LaunchedEffect(uiState) {
-                    if(uiState is LoginResult.Success){
-                        mainViewModel.checkAuth()
-                    }
-                }
-
-                val mainNavController = rememberNavController()
-                if (mainViewModel.authState.collectAsState().value) {
-                    BottomNavBar(mainNavController)
-                } else {
-                    MyApp(mainNavController)
-                }
+                initMain()
             }
+        }
+    }
+
+    @Composable
+    fun initMain() {
+        val uiState by authViewModel.uiState.collectAsState()
+
+        LaunchedEffect(uiState) {
+            if(uiState is LoginResult.Success){
+                mainViewModel.checkAuth()
+            }
+        }
+
+        val mainNavController = rememberNavController()
+        if (mainViewModel.authState.collectAsState().value) {
+            BottomNavBar(mainNavController)
+        } else {
+            MyApp(mainNavController)
         }
     }
 

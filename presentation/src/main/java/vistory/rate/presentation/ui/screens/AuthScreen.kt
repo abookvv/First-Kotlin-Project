@@ -31,7 +31,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import vistory.rate.domain.repository.LoginResult
-import vistory.rate.domain.repository.RegisterResult
 import vistory.rate.presentation.R
 import vistory.rate.presentation.viewmodel.AuthenticationViewModel
 import vistory.rate.presentation.ui.theme.authBackgroundColor

@@ -5,4 +5,6 @@
     <string name="password">Пароль</string>
     <string name="register">Регистрация</string>
     <string name="to_register">Зарегистрироваться</string>
+    <string name="result">Result</string>
+    <string name="settings">Settings</string>
 </resources>

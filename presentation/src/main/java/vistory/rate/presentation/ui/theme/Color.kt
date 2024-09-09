@@ -15,3 +15,7 @@ val pink = Color(0xFFFF95D3)
 
 val authBackgroundColor = Color(0xFFC0DBEA)
 val milk = Color(0xFFFDF4F5)
+val whiteBackground = Color(0xFF919191)
+val white = Color(0xFFFFFFFF)
+val darkerWhite = Color(0xFF949494)
+val darkText = Color(0xff474747)
