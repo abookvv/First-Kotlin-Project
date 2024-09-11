@@ -1,5 +1,6 @@
 package vistory.rate.presentation.ui.screens
 
+import androidx.activity.viewModels
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -21,6 +22,7 @@ import androidx.navigation.compose.rememberNavController
 import vistory.rate.presentation.R
 import vistory.rate.presentation.ui.theme.darkerWhite
 import vistory.rate.presentation.ui.theme.white
+import vistory.rate.presentation.viewmodel.RegistrationViewModel
 
 @Composable
 fun BottomNavBar(navController: NavHostController) {
@@ -76,6 +78,7 @@ fun BottomNavBar(navController: NavHostController) {
             composable("graph") { GraphScreen() }
             composable("main") { MainScreen(navController) }
             composable("info") { InfoScreen() }
+            composable("result") { ResultScreen(navController) }
         }
     }
 }

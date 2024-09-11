@@ -19,3 +19,6 @@ val whiteBackground = Color(0xFF919191)
 val white = Color(0xFFFFFFFF)
 val darkerWhite = Color(0xFF949494)
 val darkText = Color(0xff474747)
+
+val grey = Color(0xffF8F9FC)
+val greyTextField = Color(0xffE2E5EB)

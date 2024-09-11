@@ -7,4 +7,12 @@
     <string name="to_register">Зарегистрироваться</string>
     <string name="result">Result</string>
     <string name="settings">Settings</string>
+    <string name="start">Start</string>
+    <string name="measure">Measure</string>
+    <string name="heart">Heart</string>
+    <string name="save_result">Save result</string>
+    <string name="continue_research">Continue research</string>
+    <string name="arterial_pressure">Arterial pressure</string>
+    <string name="sys">SYS</string>
+    <string name="dia">DIA</string>
 </resources>
